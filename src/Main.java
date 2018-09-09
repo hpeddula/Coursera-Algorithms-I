@@ -15,6 +15,9 @@ public class Main {
         randomizedQueue.dequeue();
         randomizedQueue.dequeue();
         randomizedQueue.dequeue();
+        randomizedQueue.dequeue();
+        randomizedQueue.dequeue();
+        randomizedQueue.dequeue();
         randomizedQueue.enqueue("h5");
         randomizedQueue.enqueue("h6");
         randomizedQueue.enqueue("h7");
