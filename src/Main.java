@@ -33,5 +33,10 @@ public class Main {
         {
             System.out.println(r);
         }
+        System.out.println("-------------Third Iterator-------------");
+        for (String r:randomizedQueue)
+        {
+            System.out.println(r);
+        }
     }
 }

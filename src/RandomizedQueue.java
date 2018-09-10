@@ -98,7 +98,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
                 }
                 Item item = iteratorArray[random];
                 iteratorArray[random] = null;
-                System.out.println(Arrays.toString(iteratorArray));
+//                System.out.println(Arrays.toString(iteratorArray));
                 i--;
                 return item;
             }
