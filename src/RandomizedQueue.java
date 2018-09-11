@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
-    Item items[];
+    private Item items[];
     private int Last = -1;// this is the indicator for adding items in the beginning of the array.
-    int N = 0;// Count of items.
-    int random;
+    private int N = 0;// Count of items.
+    private int random;
 
     public RandomizedQueue() {
         items = (Item[]) new Object[1];
