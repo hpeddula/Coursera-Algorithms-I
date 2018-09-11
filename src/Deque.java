@@ -84,7 +84,7 @@ public class Deque<Item> implements Iterable<Item>
         if(N==0) throw new java.util.NoSuchElementException();
         Item item = First.item;
         First = First.next;
-        First.next.previous =null;
+        if(First.next != null) First.next.previous =null;
         N--;
         return item;
     }
@@ -117,7 +117,7 @@ public class Deque<Item> implements Iterable<Item>
         @Override
         public Item next()
         {
-            if(current.next == null) throw new java.util.NoSuchElementException();
+            if(current == null) throw new java.util.NoSuchElementException();
             Item item = current.item;
             current = current.next;
             return item;
