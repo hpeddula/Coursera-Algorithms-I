@@ -45,10 +45,9 @@ public class Main {
     deque.addFirst("be");
     deque1.addLast(1);
     deque1.addFirst(2);
-    deque.removeFirst();
-    deque.removeFirst();
-    deque1.removeFirst();
-    deque1.removeFirst();
-
+    System.out.println(deque.removeFirst());
+    System.out.println(deque.removeFirst());
+    System.out.println(deque1.removeFirst());
+    System.out.println(deque1.removeFirst());
     }
 }
