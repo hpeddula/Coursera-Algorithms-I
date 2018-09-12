@@ -92,8 +92,8 @@ public class Deque<Item> implements Iterable<Item>
     {
         if(N==0) throw new java.util.NoSuchElementException();
         Item item = Last.item;
-        Last.previous.next = null;
-        Last =Last.previous ;
+        if (Last.previous != null)Last.previous.next = null;
+        if (Last.previous != null)Last =Last.previous ;
         N--;
         return item;
     }

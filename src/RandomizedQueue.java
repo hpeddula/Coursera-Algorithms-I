@@ -46,6 +46,9 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     {
         if (N == 0) throw new java.util.NoSuchElementException();
         random = StdRandom.uniform(0,items.length);
+        while (items[random] == null) {
+            random = StdRandom.uniform(0, items.length);
+        }
         return items[random];
     }
     private void resize(int capacity)
