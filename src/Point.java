@@ -50,7 +50,7 @@ public class Point implements Comparable<Point> {
      */
     public double slopeTo(Point that) {
         /* YOUR CODE HERE */
-        return (this.x - that.x/this.y - that.y);
+        return ((float)(this.x - that.x))/(this.y - that.y);
     }
 
     /**
@@ -67,7 +67,8 @@ public class Point implements Comparable<Point> {
      */
     public int compareTo(Point that) {
         /* YOUR CODE HERE */
-        if(this.y < that.y || this.y == that.y || this.x < that.x) return 1;
+        if(this.y < that.y || this.x < that.x) return 1;
+        else if( this.y == that.y) return 0;
         else return -1;
     }
 
@@ -88,6 +89,7 @@ public class Point implements Comparable<Point> {
             double slope1 = slopeTo(o1);
             double slope2 = slopeTo(o2);
             if (slope1 < slope2) return 1;
+            else if(slope1 == slope2 ) return 0;
             else return -1;
         }
     }
