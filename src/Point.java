@@ -86,10 +86,8 @@ public class Point implements Comparable<Point> {
     {
         @Override
         public int compare(Point o1, Point o2) {
-            double slope1 = slopeTo(o1);
-            double slope2 = slopeTo(o2);
-            if (slope1 < slope2) return 1;
-            else if(slope1 == slope2 ) return 0;
+            if (slopeTo(o1) < slopeTo(o2)) return 1;
+            else if(slopeTo(o1) == slopeTo(o2) ) return 0;
             else return -1;
         }
     }
@@ -112,8 +110,5 @@ public class Point implements Comparable<Point> {
      */
     public static void main(String[] args) {
         /* YOUR CODE HERE */
-        Point p = new Point(2,2);
-        Point q = new Point(4,4);
-        System.out.println(p.slopeTo(q));
     }
 }
