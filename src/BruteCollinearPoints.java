@@ -19,6 +19,7 @@ public class BruteCollinearPoints
                     for (int l = k+1; l <N ; l++)
                     {
                         if(points[i] == null || points[j] == null || points[k] == null || points[l] == null) throw new java.lang.IllegalArgumentException();
+                        if(points[i].equals(points[j]) || points[i].equals(points[k]) || points[i].equals(l) || points[j].equals(points[k]) || points[j].equals(l) || points[k].equals(l)) throw new java.lang.IllegalArgumentException();
                         p = points[i];
                         q = points[j];
                         r = points[k];
