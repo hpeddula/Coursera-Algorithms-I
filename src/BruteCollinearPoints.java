@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 public class BruteCollinearPoints
 {
-    private int segments=0;
+    private int segments=0,N;
     private double pqSlope,prSlope,psSlope;
     private Point p,q,r,s;
     private ArrayList<LineSegment> lineSegments = new ArrayList<>();
     public BruteCollinearPoints(Point[] points)
     {
-        int N = points.length;
+        N = points.length;
         if(points == null) throw new java.lang.IllegalArgumentException();
         for (int i = 0; i < N ; i++)
         {
