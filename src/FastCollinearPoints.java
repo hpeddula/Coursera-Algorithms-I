@@ -10,10 +10,11 @@ public class FastCollinearPoints
     private int segments=0,N;
     private Point p,q;
     private double pqSlope=0;
-    private ArrayList<Double> slopes = new ArrayList<>();
+    Double[] slopes;
     public FastCollinearPoints(Point[] points)
     {
         N = points.length;
+        slopes = new Double[N];
         if(points == null) throw new IllegalArgumentException();
         for (int i = 0; i <N ; i++)
         {
@@ -22,15 +23,10 @@ public class FastCollinearPoints
             {
                 q=points[j];
                 pqSlope = p.slopeTo(q);
-                slopes.add(pqSlope);
+                slopes[j-1] = pqSlope;
+                
             }
         }
-    }
-    private void sort(ArrayList<Double> slopes)
-    {
-        Double[] slopes1 = new Double[slopes.size()];
-        slopes1 = slopes.toArray(slopes1);
-
     }
     public int numberOfSegments()
     {
