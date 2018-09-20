@@ -4,28 +4,22 @@ import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FastCollinearPoints
 {
-    private int segments=0,N;
+    private int segments=0;
     private Point p,q;
     private double pqSlope=0;
-    Double[] slopes;
+    Double[] arr;
     public FastCollinearPoints(Point[] points)
     {
-        N = points.length;
-        slopes = new Double[N];
+        arr = new Double[points.length];
         if(points == null) throw new IllegalArgumentException();
-        for (int i = 0; i <N ; i++)
+        for (int i = 0; i < points.length; i++)
         {
             p=points[i];
-            for (int j = i+1; j <N ; j++)
-            {
-                q=points[j];
-                pqSlope = p.slopeTo(q);
-                slopes[j-1] = pqSlope;
-                
-            }
+            Arrays.sort(points,p.slopeOrder());
         }
     }
     public int numberOfSegments()
