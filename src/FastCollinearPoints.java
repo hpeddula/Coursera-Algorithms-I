@@ -9,17 +9,19 @@ import java.util.Arrays;
 public class FastCollinearPoints
 {
     private int segments=0;
-    private Point p,q;
-    private double pqSlope=0;
-    Double[] arr;
+    private Point p;
+    private ArrayList<LineSegment> lineSegments = new ArrayList<>();
     public FastCollinearPoints(Point[] points)
     {
-        arr = new Double[points.length];
         if(points == null) throw new IllegalArgumentException();
         for (int i = 0; i < points.length; i++)
         {
             p=points[i];
             Arrays.sort(points,p.slopeOrder());
+            for (int j = 0; j < points.length; j++)
+            {
+
+            }
         }
     }
     public int numberOfSegments()
