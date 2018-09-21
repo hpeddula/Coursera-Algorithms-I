@@ -13,9 +13,10 @@ public class FastCollinearPoints
     private ArrayList<LineSegment> lineSegments = new ArrayList<>();
     public FastCollinearPoints(Point[] points)
     {
-        if(points == null) throw new IllegalArgumentException();
+        if(points == null) throw new java.lang.IllegalArgumentException();;
         for (int i = 0; i < points.length; i++)
         {
+            if(points[i] == null) throw new java.lang.IllegalArgumentException();
             p=points[i];
             Arrays.sort(points,p.slopeOrder());
             for (int j = 0; j < points.length; j++)

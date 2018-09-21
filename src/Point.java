@@ -50,7 +50,11 @@ public class Point implements Comparable<Point> {
      */
     public double slopeTo(Point that) {
         /* YOUR CODE HERE */
-        return ((float)(that.y - this.y))/(that.x - this.x);
+        if(that == null) throw new java.lang.NullPointerException();
+        if(this.x == that.x && this.y == that.y) return Double.NEGATIVE_INFINITY;
+        else if(this.y  == that.y) return 0;
+        else if(this.x == that.x ) return Double.POSITIVE_INFINITY;
+        else return (double) ((that.y - this.y)/(that.x - this.x));
     }
 
     /**
@@ -67,6 +71,7 @@ public class Point implements Comparable<Point> {
      */
     public int compareTo(Point that) {
         /* YOUR CODE HERE */
+        if(that == null)  throw new java.lang.NullPointerException();
         if(this.y < that.y || this.x < that.x) return 1;
         else if( this.y == that.y) return 0;
         else return -1;
@@ -86,7 +91,11 @@ public class Point implements Comparable<Point> {
     {
         @Override
         public int compare(Point o1, Point o2) {
-            if (slopeTo(o1) < slopeTo(o2)) return 1;
+            if(o1 == null || o2 == null ) throw new java.lang.NullPointerException();
+            if(o1.x == o2.x && o1.y == o2.y) return (int)Double.NEGATIVE_INFINITY;
+            else if (o1.y == o2.y ) return 0;
+            else if(o1.x == o2.x ) return (int) Double.POSITIVE_INFINITY;
+            else if (slopeTo(o1) < slopeTo(o2)) return 1;
             else if(slopeTo(o1) == slopeTo(o2) ) return 0;
             else return -1;
         }
