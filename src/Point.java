@@ -127,5 +127,6 @@ public class Point implements Comparable<Point> {
         Point p = new Point(483, 316);
         Point q = new Point(364, 384 );
         System.out.println( p.compareTo(q) );
+
     }
 }
