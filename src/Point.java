@@ -97,12 +97,12 @@ public class Point implements Comparable<Point> {
         @Override
         public int compare(Point o1, Point o2) {
             if(o1 == null || o2 == null ) throw new java.lang.NullPointerException();
-            if(o1.x == o2.x && o1.y == o2.y) return (int)Double.NEGATIVE_INFINITY ;
-            else if (o1.y == o2.y ) return 0;
-            else if(o1.x == o2.x ) return (int) Double.POSITIVE_INFINITY;
-//            else if(slopeTo(o1) == slopeTo(o2) ) return 0;
-            else if (slopeTo(o1) < slopeTo(o2)) return 1;
-            else return -1;
+//            if(o1.x == o2.x && o1.y == o2.y) return (int)Double.NEGATIVE_INFINITY ;
+//            else if (o1.y == o2.y ) return 0;
+//            else if(o1.x == o2.x ) return (int) Double.POSITIVE_INFINITY;
+            if(slopeTo(o1) == slopeTo(o2) ) return 0;
+            else if (slopeTo(o1) < slopeTo(o2)) return -1;
+            else return 1;
         }
     }
 
@@ -127,6 +127,6 @@ public class Point implements Comparable<Point> {
         Point p = new Point(180, 298);
         Point q = new Point(451, 339 );
         System.out.println( p.slopeOrder().compare(q, q));
-
+        System.out.println(Integer.MIN_VALUE);
     }
 }
