@@ -15,15 +15,19 @@ public class BruteCollinearPoints {
     public BruteCollinearPoints(Point[] points) {
         N = points.length;
         if (points == null) throw new java.lang.IllegalArgumentException();
+        for (Point p:points
+             ) {
+            if(p == null) throw new java.lang.IllegalArgumentException();
+        }
+        for (int i = 0; i <N ; i++) {
+            for (int j = 1; j <N ; j++) {
+                if(points[i].compareTo(points[j]) ==0) throw new java.lang.IllegalArgumentException();
+            }
+        }
         for (int i = 0; i < N; i++) {
             for (int j = i + 1; j < N-1; j++) {
                 for (int k = j + 1; k < N-2; k++) {
                     for (int l = k + 1; l < N-3; l++) {
-                        if (points[i] == null || points[j] == null || points[k] == null || points[l] == null)
-                            throw new java.lang.IllegalArgumentException();
-                        if(points[i].compareTo(points[j]) ==0 || points[i].compareTo(points[k]) ==0 || points[i].compareTo(points[l])==0
-                            || points[j].compareTo(points[k]) ==0 || points[j].compareTo(points[l])==0 || points[k].compareTo(points[l]) ==0 )
-                            throw new java.lang.IllegalArgumentException();
                         p = points[i];
                         q = points[j];
                         r = points[k];
@@ -32,14 +36,7 @@ public class BruteCollinearPoints {
                         prSlope = p.slopeTo(r);
                         psSlope = p.slopeTo(s);
                         if (pqSlope == prSlope && prSlope == psSlope) {
-                            if(p.slopeTo(q) ==0 && p.slopeTo(r) ==0 && p.slopeTo(s) ==0)
                             {lineSegments.add(new LineSegment(p, s));}
-                            else
-                            {
-                                lineSegments.add(new LineSegment(p,q));
-                                lineSegments.add(new LineSegment(q,r));
-                                lineSegments.add(new LineSegment(r,s));
-                            }
                         }
                     }
                 }
