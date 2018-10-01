@@ -8,15 +8,24 @@ import java.util.Arrays;
 
 public class FastCollinearPoints
 {
-    private int segments=0;
+    private int segments=0,N;
     private Point p;
     private ArrayList<LineSegment> lineSegments = new ArrayList<>();
     public FastCollinearPoints(Point[] points)
     {
-        if(points == null) throw new java.lang.IllegalArgumentException();;
+        N = points.length;
+        if (points == null) throw new java.lang.IllegalArgumentException();
+        for (Point p:points
+        ) {
+            if(p == null) throw new java.lang.IllegalArgumentException();
+        }
+        for (int i = 0; i <N ; i++) {
+            for (int j = 1; j <N ; j++) {
+                if(points[i].compareTo(points[j]) ==0) throw new java.lang.IllegalArgumentException();
+            }
+        }
         for (int i = 0; i < points.length; i++)
         {
-            if(points[i] == null) throw new java.lang.IllegalArgumentException();
             p=points[i];
             Arrays.sort(points,p.slopeOrder());
             for (int j = 0; j < points.length; j++)
