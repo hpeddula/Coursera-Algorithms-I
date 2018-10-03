@@ -1,0 +1,12 @@
+Merge Sort Debugging:
+First call to Sort sort(a,aux,0,15).
+lo =0,hi =15,mid = 7
+First recursive call to sort (a,aux,0,7) (Sort Method Signature(a,aux,lo,mid))
+lo =0,hi =7,mid = 3 
+Second recursive call to sort(a,aux,0,3) (Sort Method Signature(a,aux,lo,mid))
+lo =0,hi=3,mid =1
+Third recursive call to sort(a,aux,0,1) (Sort Method Signature(a,aux,lo,mid))
+lo = 0,hi=1,mid =0
+On the fourth recursive call to sort(a,aux,0,0) (Sort Method Signature(a,aux,lo,mid))
+the if condition that if hi <= lo gets satisfied and the sort method with the signature (a,aux.mid+1,hi) gets called.
+sort(a,aux,1,1),here i think that hi holds the value that which it got from the arguments list on the third recursive call.
