@@ -1,9 +1,11 @@
+import StacksandQueues.Deque;
+
 public class Main {
 
     public static void main(String[] args)
     {
 	// write your code here
-//        RandomizedQueue<String> randomizedQueue = new RandomizedQueue<>();
+//        StacksandQueues.RandomizedQueue<String> randomizedQueue = new StacksandQueues.RandomizedQueue<>();
 //        randomizedQueue.enqueue("to");
 //        randomizedQueue.enqueue("be");
 //        randomizedQueue.enqueue("or");
@@ -39,7 +41,7 @@ public class Main {
 //        {
 //            System.out.println(r);
 //        }
-    Deque<String>  deque = new Deque<>();
+    Deque<String> deque = new Deque<>();
     Deque<Integer> deque1 = new Deque<>();
     deque.addFirst("to");
     deque.addFirst("be");

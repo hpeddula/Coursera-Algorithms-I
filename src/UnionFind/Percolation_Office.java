@@ -1,3 +1,5 @@
+package UnionFind;
+
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 public class Percolation_Office {
     private boolean isOpen[][];
@@ -89,7 +91,7 @@ public class Percolation_Office {
 }
 /**
  * Weighted Quick Union implementation of the QuickFind is the most efficient one of the lot available.
- * Percolation_Office simulates the WeightedQuickUnion Parent 1D array using a 2D array isOpen, the source of truth is
+ * UnionFind.Percolation_Office simulates the WeightedQuickUnion Parent 1D array using a 2D array isOpen, the source of truth is
  * the 1D array which is created by the WeightedQuickUnion.The GetPosition Method is used to map to the simulated 1d array of the
  * WeightedQuickUnion.
  */

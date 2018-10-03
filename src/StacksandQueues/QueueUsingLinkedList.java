@@ -1,3 +1,5 @@
+package StacksandQueues;
+
 public class QueueUsingLinkedList
 {
     private Node first,last;

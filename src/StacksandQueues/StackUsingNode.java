@@ -1,3 +1,5 @@
+package StacksandQueues;
+
 public class StackUsingNode
 {
     private Node first = null;

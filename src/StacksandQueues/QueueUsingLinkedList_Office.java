@@ -1,3 +1,5 @@
+package StacksandQueues;
+
 public class QueueUsingLinkedList_Office {
     private Node first, last;
     private class Node

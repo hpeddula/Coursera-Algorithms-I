@@ -1,3 +1,5 @@
+package StacksandQueues;
+
 import edu.princeton.cs.algs4.StdRandom;
 
 import java.util.Arrays;
@@ -75,7 +77,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
     private class RandomizedQueueIterator implements Iterator<Item>
     {
-//        RandomizedQueue<Item> randomizedQueue = new RandomizedQueue<>();
+//        StacksandQueues.RandomizedQueue<Item> randomizedQueue = new StacksandQueues.RandomizedQueue<>();
         Item[] iteratorArray;
         private int i = N;
         public RandomizedQueueIterator()

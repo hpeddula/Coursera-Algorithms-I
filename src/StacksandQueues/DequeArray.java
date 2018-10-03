@@ -1,3 +1,5 @@
+package StacksandQueues;
+
 import java.util.Iterator;
 
 public class DequeArray<Item> implements Iterable<Item>

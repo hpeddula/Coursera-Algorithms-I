@@ -1,3 +1,5 @@
+package Sorts;
+
 public class InsertionSort
 {
     public static void sort(Comparable[] a)

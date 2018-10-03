@@ -1,3 +1,5 @@
+package StacksandQueues;
+
 public class StackUsingArray
 {
     private String S[];

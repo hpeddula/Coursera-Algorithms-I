@@ -1,3 +1,5 @@
+package StacksandQueues;
+
 public class StackUsingResizing
 {
     int N =0;
