@@ -16,6 +16,7 @@
  *
  ******************************************************************************/
 
+import UnionFind.Percolation;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 

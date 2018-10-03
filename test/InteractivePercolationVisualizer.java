@@ -11,8 +11,10 @@
  *
  ******************************************************************************/
 
+import UnionFind.Percolation;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
+import UnionFind.Percolation;
 
 public class InteractivePercolationVisualizer {
 
