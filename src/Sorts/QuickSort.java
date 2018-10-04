@@ -41,4 +41,9 @@ public class QuickSort {
         a[i]= a[j];
         a[j]= swap;
     }
+    public static void main(String[] args)
+    {
+        String[] arr = new String[]{"Q","U","I","C","K","S","O","R","T","E","X","A","M","P","L","E"};
+        MergeSort.sort(arr);
+    }
 }
