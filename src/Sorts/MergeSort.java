@@ -20,8 +20,8 @@ public class MergeSort
     {
         if(hi <= lo) return;
         int mid = lo + (hi - lo) /2;
-        sort(a,aux,lo,mid);
-        sort(a,aux,mid+1,hi);
+        sort(a,aux,lo,mid); // Sorts the lower half.
+        sort(a,aux,mid+1,hi); // Sorts the upper half.
         merge(a,aux,lo,mid,hi);
     }
     public static void sort(Comparable[] a)

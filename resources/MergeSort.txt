@@ -1,12 +1,13 @@
-Merge Sort Debugging:
-First call to Sort sort(a,aux,0,15).
-lo =0,hi =15,mid = 7
-First recursive call to sort (a,aux,0,7) (Sort Method Signature(a,aux,lo,mid))
-lo =0,hi =7,mid = 3 
-Second recursive call to sort(a,aux,0,3) (Sort Method Signature(a,aux,lo,mid))
-lo =0,hi=3,mid =1
-Third recursive call to sort(a,aux,0,1) (Sort Method Signature(a,aux,lo,mid))
-lo = 0,hi=1,mid =0
-On the fourth recursive call to sort(a,aux,0,0) (Sort Method Signature(a,aux,lo,mid))
-the if condition that if hi <= lo gets satisfied and the sort method with the signature (a,aux.mid+1,hi) gets called.
-sort(a,aux,1,1),here i think that hi holds the value that which it got from the arguments list on the third recursive call.
+First call to Sort from the client is the one which calls the one which accepts only a single array.
+sort(Comparable[] a) => this gets the array from the client.
+
+This sort method creates an aux array and initializes it with the length of the array passed into the function.
+
+Values passed to the second sort method sort(Comparable[] a,Comparable[] aux,int hi,int lo).
+
+Private Sort gets invoked for the first time with sort(a,aux,0,15).
+
+The private sort calculates the mid value based on the lo and hi values,so mid = 0+(15-0)/2 =7.
+
+
+
